@@ -394,6 +394,8 @@
         audioText.play();
 
         statusElement.textContent = "🎧 Listen to the narration...";
+        correctAnswerElement.textContent = "";
+        answerElement.textContent = "";
 
         // ==========================================
         // AUDIO SELESAI
@@ -580,40 +582,6 @@
         let index = Math.floor(((360 - normalizedAngle + 15) % 360) / 30);
         return index;
       }
-
-      // ==========================================
-      // VOICE RECOGNITION
-      // ==========================================
-
-      // function startVoiceRecognition(correctAnswer) {
-      //   if (!recognition) {
-      //     return;
-      //   }
-
-      //   recognition.start();
-      //   recognition.onstart = () => {
-      //     statusElement.textContent = "🎤 Listening...";
-      //   };
-
-      //   recognition.onresult = (event) => {
-      //     const spokenText = event.results[0][0].transcript;
-      //     answerElement.textContent = `You said: "${spokenText}"`;
-      //     checkAnswer(spokenText, correctAnswer);
-      //   };
-
-      //   recognition.onerror = (event) => {
-      //     console.log("Speech recognition error:", event.error);
-      //     statusElement.textContent = "❌ Voice recognition error";
-
-      //     if (event.error === "not-allowed") {
-      //       alert("Microphone permission is denied. Please allow microphone access.");
-      //     }
-      //   };
-
-      //   recognition.onend = () => {
-      //     alert("You think too long.. \n Please try again.");
-      //   };
-      // }
 
       // ==========================================
       // VOICE RECOGNITION
