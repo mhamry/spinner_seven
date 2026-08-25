@@ -191,6 +191,12 @@
         cursor: pointer;
       }
 
+      .footer {
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+      }
+
       /* =========================
          RESPONSIVE
       ========================= */
@@ -371,7 +377,6 @@
       // Aktifkan audio naration
       // ==========================================
       let narrationPlaying = false;
-
       narationBtn.addEventListener("click", () => {
         // Jika audio masih berjalan, jangan lakukan apa-apa
         if (narrationPlaying) {
@@ -396,6 +401,7 @@
         statusElement.textContent = "🎧 Listen to the narration...";
         correctAnswerElement.textContent = "";
         answerElement.textContent = "";
+        questionElement.textContent = "";
 
         // ==========================================
         // AUDIO SELESAI
@@ -412,6 +418,7 @@
           stopBtn.style.cursor = "pointer";
 
           statusElement.textContent = "You can start the game.";
+          questionElement.textContent = "Click START to play";
         };
       });
 
