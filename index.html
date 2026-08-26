@@ -273,11 +273,11 @@
 
       <div class="wheel">
         <div class="rotateWheel">
-          <div class="sector" style="--i: 0; background: red" data-question="his name is fluffy">
+          <div class="sector" style="--i: 0; background: red" data-question="fluffy">
             <span>What is the cat's name?</span>
           </div>
 
-          <div class="sector" style="--i: 1; background: khaki" data-question="he likes to eat fish.">
+          <div class="sector" style="--i: 1; background: khaki" data-question="fish.">
             <span>What does he like to eat?</span>
           </div>
 
@@ -289,7 +289,7 @@
             <span>Is the cat funny?</span>
           </div>
 
-          <div class="sector" style="--i: 4; background: green" data-question="his fur color is white">
+          <div class="sector" style="--i: 4; background: green" data-question="soft and white">
             <span>What is his fur color?</span>
           </div>
 
@@ -297,15 +297,15 @@
             <span>Does the the man love his cat?</span>
           </div>
 
-          <div class="sector" style="--i: 6; background: palegreen" data-question="his ears are small and sharp">
+          <div class="sector" style="--i: 6; background: palegreen" data-question="small and sharp">
             <span>What does the cat's ear look like?</span>
           </div>
 
-          <div class="sector" style="--i: 7; background: palevioletred" data-question="he has long tail">
+          <div class="sector" style="--i: 7; background: palevioletred" data-question="long">
             <span>What does the cat's tail look like?</span>
           </div>
 
-          <div class="sector" style="--i: 8; background: yellow" data-question="he has blue eyes">
+          <div class="sector" style="--i: 8; background: yellow" data-question="bright and blue">
             <span>What does the cat's eyes look like?</span>
           </div>
 
@@ -317,7 +317,7 @@
             <span>Is the cat from abrod?</span>
           </div>
 
-          <div class="sector" style="--i: 11; background: plum" data-question="he has one cat.">
+          <div class="sector" style="--i: 11; background: plum" data-question="one cat.">
             <span>How many cats does the man have?</span>
           </div>
         </div>
@@ -383,6 +383,10 @@
           return;
         }
 
+        if (gameRunning) {
+          return;
+        }
+
         narrationPlaying = true;
 
         // Nonaktifkan tombol
@@ -417,7 +421,7 @@
           startBtn.style.cursor = "pointer";
           stopBtn.style.cursor = "pointer";
 
-          statusElement.textContent = "You can start the game.";
+          statusElement.textContent = "";
           questionElement.textContent = "Click START to play";
         };
       });
